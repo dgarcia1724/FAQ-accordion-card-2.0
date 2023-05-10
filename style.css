@@ -1,0 +1,170 @@
+:root {
+  --googleFont: "Kumbh Sans", sans-serif;
+  /****** Primary ******/
+  /* Text */
+  --varyDarkDesaturatedBlue: hsl(238, 29%, 16%);
+  --softRed: hsl(14, 88%, 65%);
+  /* Gradient */
+  --bgGradient: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  /****** Neutral ******/
+  /* Text */
+  --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+  --darkGrayishBlue: hsl(240, 6%, 50%);
+  /****** Dividers ******/
+  --lightGrayishBlue: hsl(240, 5%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--googleFont);
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bgGradient);
+  font-size: 1.8rem;
+}
+
+.card {
+  width: 32.7rem;
+
+  padding: 13.2rem 2.4rem 4.8rem;
+
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+
+  position: relative;
+}
+
+.mobileWomanOnline {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+
+  width: 23.7rem;
+}
+
+.bgPatternMobile {
+  position: absolute;
+  top: 0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 23.7rem;
+}
+
+.desktopWomanOnline {
+  display: none;
+}
+
+.bgPatternDesktop {
+  display: none;
+}
+
+.container > h1 {
+  margin-bottom: 1.9rem;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 3.2rem;
+
+  color: var(--varyDarkDesaturatedBlue);
+}
+
+.dropDown {
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+  border-bottom: 1px solid var(--lightGrayishBlue);
+}
+
+.questionFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+.regularGray {
+  font-weight: 400;
+  font-size: 1.3rem;
+
+  color: var(--veryDarkGrayishBlue);
+}
+
+.darkBold {
+  font-weight: 700;
+  color: var(--varyDarkDesaturatedBlue);
+}
+
+.answer {
+  display: none;
+}
+
+.answer > p {
+  font-weight: 400;
+  font-size: 1.2rem;
+
+  color: var(--darkGrayishBlue);
+}
+
+/******* DESKTOP  ********/
+@media (min-width: 1400px) {
+  .card {
+    width: 92rem;
+
+    padding: 6.5rem 9.5rem 8.3rem 47.5rem;
+    overflow: hidden;
+  }
+
+  .mobileWomanOnline {
+    display: none;
+  }
+
+  .bgPatternMobile {
+    display: none;
+  }
+
+  .desktopWomanOnline {
+    display: block;
+    position: absolute;
+    top: 7.1rem;
+    left: -8.4rem;
+
+    width: 47.2rem;
+  }
+
+  .bgPatternDesktop {
+    display: block;
+    position: absolute;
+    top: -29.4rem;
+    left: -57.6rem;
+
+    width: 96.4rem;
+  }
+
+  .container > h1 {
+    text-align: left;
+  }
+
+  .regularGray {
+    font-size: 1.4rem;
+  }
+}
