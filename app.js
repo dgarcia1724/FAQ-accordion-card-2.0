@@ -8,10 +8,10 @@ allDropDowns.forEach(function (dropDown) {
 
   questionFlex.addEventListener("click", function () {
     if (
-      answer.style.display === "block" &&
-      arrow.style.transform === "rotate(180deg)" &&
-      questionFlex.style.marginBottom === "12px" &&
-      question.classList.contains("darkBold")
+      // answer.style.display === "block" &&
+      arrow.style.transform === "rotate(180deg)"
+      // questionFlex.style.marginBottom === "12px" &&
+      // question.classList.contains("darkBold")
     ) {
       answer.style.display = "none";
       arrow.style.transform = "rotate(0deg)";
